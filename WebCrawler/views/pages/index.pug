@@ -1,0 +1,30 @@
+html
+  head
+    title= Home
+  body
+    include ../partials/header
+    div#main
+      h1 Search
+      form(action="/fruits" method="get" id="resultsForm")
+            input(type="radio" name="domain" value="/personal" onclick="changeFormAction(this)") 
+            label(for="Personal") Search Personal
+            input(type="radio" name="domain" value="/fruits" onclick="changeFormAction(this)" checked) 
+            label(for="Fruits") Search Fruits
+            br
+            br
+            input(type="text" name="q" placeholder="Search for pages...")
+            br
+            input(type="checkbox" id="boost" name="boost" placeholder="Boost Using PageRank")
+            a Boost Using PageRank
+            br
+            input(type="number" name="limit" placeholder="Desired Number Of Results" min = 1 max = 50 value = 10)
+            label(for="limit")  Desired Number Of Results
+            br
+            br
+            button(type="submit") Search
+
+
+script. 
+  function changeFormAction(checkbox) { 
+      document.getElementById("resultsForm").action = checkbox.value;
+  }

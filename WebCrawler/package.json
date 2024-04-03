@@ -1,0 +1,20 @@
+{
+  "name": "webcrawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "crawler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "crawler": "^1.4.0",
+    "elasticlunr": "^0.9.5",
+    "express": "^4.18.2",
+    "ml-matrix": "^6.10.7",
+    "mongoose": "^7.6.3",
+    "pug": "^3.0.2"
+  }
+}

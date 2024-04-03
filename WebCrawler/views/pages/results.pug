@@ -1,0 +1,22 @@
+html
+  head
+    title= Results
+  body
+    include ../partials/header
+    div#main
+      h2 Top results for query: #{keywords}
+      ul 
+          each page, i in pages
+              li
+                  p Title: 
+                    a(href="/page/"+page.title)= page.title
+                  p URL: 
+                    a(href=`${page.url}`)= page.url
+                  if pages[i]
+                    p Search Score: #{pages[i].score} <br> 
+                    p Page Rank: #{pages[i].pr}
+                    a(href="/page/"+page.title) More Info <br>
+                    br
+                    br
+
+                  
